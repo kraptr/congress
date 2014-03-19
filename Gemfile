@@ -10,6 +10,8 @@ gem 'yajl-ruby', '1.1.0' # for parsing
 gem "mongoid", '3.0.14'
 gem 'rubberband', '0.9.8'
 
+gem 'spreadsheet'
+
 gem 'tzinfo', '0.3.23'
 gem 'ruby-hmac', '0.4.0'
 gem 'pony', '1.0.1'
