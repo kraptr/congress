@@ -23,7 +23,7 @@ class Environment
   end
 
   def self.check_key?
-    !(config[:debug] and config[:debug][:ignore_apikey])
+    !(config['debug'] and config['debug']['ignore_apikey'])
   end
 end
 
@@ -35,7 +35,7 @@ configure do
   Searchable.configure_clients!
 
   Time::DATE_FORMATS.merge!(:default => Proc.new {|t| t.xmlschema})
-  Time.zone = ActiveSupport::TimeZone.find_tzinfo "America/New_York"
+  Time.zone_default = ActiveSupport::TimeZone.find_tzinfo "America/New_York"
   Oj.default_options = {mode: :compat, time_format: :ruby}
 end
 
